@@ -5,7 +5,14 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)] float currentSpeed = 1f;
-    GameObject currentTarget;    
+    GameObject currentTarget;
+    LevelController levelController;
+
+    private void Awake()
+    {
+        levelController = FindObjectOfType<LevelController>();
+        levelController.AddAttacker();
+    }
 
     void Update()
     {
@@ -41,5 +48,10 @@ public class Attacker : MonoBehaviour
         {
             health.DealDamage(damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        levelController.RemoveAttacker();
     }
 }

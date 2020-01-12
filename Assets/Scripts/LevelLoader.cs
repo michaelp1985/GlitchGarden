@@ -27,6 +27,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void LoadLoserScreen()
+    {
+        SceneManager.LoadScene("Loser Screen");
+    }
+
     public void ExitGame()
     {
         Application.Quit();

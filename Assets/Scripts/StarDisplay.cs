@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class StarDisplay : MonoBehaviour
@@ -21,10 +19,11 @@ public class StarDisplay : MonoBehaviour
     }
 
     public void SpendingStars(int amount)
-    {
+    {        
         if (amount <= this.stars)
         {
             this.stars -= amount;
+            UpdateDisplay();
         }
     }
     
