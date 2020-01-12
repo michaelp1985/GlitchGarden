@@ -31,8 +31,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void PlayerDies()
-    {
-        // game over
-        FindObjectOfType<LevelLoader>().LoadLoserScreen();
+    {        
+        FindObjectOfType<LevelController>().HandleLoseCondition();
     }
 }
