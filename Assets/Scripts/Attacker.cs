@@ -11,8 +11,8 @@ public class Attacker : MonoBehaviour
     private void Awake()
     {
         levelController = FindObjectOfType<LevelController>();
-        levelController.AddAttacker();
-    }
+        levelController.AddAttacker();        
+    }    
 
     void Update()
     {
@@ -52,6 +52,7 @@ public class Attacker : MonoBehaviour
 
     private void OnDestroy()
     {
-        levelController.RemoveAttacker();
+        if (levelController != null)
+            levelController.RemoveAttacker();
     }
 }

@@ -16,6 +16,16 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void SetHealth(float health)
+    {
+        this.health = health;
+    }
+
+    public float GetHealth()
+    {
+        return this.health;
+    }
+
     private void TriggerDeathVFX()
     {
         if (deathVFX)

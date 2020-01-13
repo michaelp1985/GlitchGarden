@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Fox : MonoBehaviour
 {
+    private void Start()
+    {
+        SetDifficulty();
+    }
+
+    public void SetDifficulty()
+    {
+        Health health = GetComponent<Health>();
+        health.SetHealth(PlayerPrefsController.GetDifficulty() * 50f);
+    }
+
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
         GameObject otherObject = otherCollider.gameObject;

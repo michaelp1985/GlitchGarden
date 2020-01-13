@@ -41,7 +41,7 @@ public class LevelController : MonoBehaviour
     {
         AttackerSpawner[] spawnerArray = FindObjectsOfType<AttackerSpawner>();
 
-        foreach(var spawner in spawnerArray)
+        foreach (var spawner in spawnerArray)
         {
             spawner.StopSpawning();
         }
@@ -70,8 +70,8 @@ public class LevelController : MonoBehaviour
             if (isTimeOver && attackerCount <= 0)
             {
                 isLevelComplete = true;
-                StartCoroutine(HandleWinCondition());                
-            } 
+                StartCoroutine(HandleWinCondition());
+            }
         }
     }
 }
